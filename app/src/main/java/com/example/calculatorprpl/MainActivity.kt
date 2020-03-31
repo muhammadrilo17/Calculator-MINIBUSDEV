@@ -56,9 +56,30 @@ class MainActivity : AppCompatActivity() {
                 txtHasil.setText(c.toString())
             }
         }
+        btnCos.setOnClickListener {
+            if (txtNumber1.text.toString().isEmpty() || txtNumber2.text.toString().isEmpty()) {
+                txtNumber1.setError("All inputs must be filled!")
+            } else {
+                val a = txtNumber1.text.toString().toDouble()
+                val c = this.cos(a)
+                txtHasil.setText(c.toString())
+            }
+        }
+         btnSin.setOnClickListener {
+            if (txtNumber1.text.toString().isEmpty() || txtNumber2.text.toString().isEmpty()) {
+                txtNumber1.setError("All inputs must be filled!")
+            } else {
+                val a = txtNumber1.text.toString().toDouble()
+                val c = this.sin(a)
+                txtHasil.setText(c.toString())
+            }
+        }
 
     }
-
+    fun cos (a : Float) : Float
+    
+    fun sin (a : Float) : Float
+    
     fun substraction(a: Double, b: Double): Double {
         return a - b
     }
