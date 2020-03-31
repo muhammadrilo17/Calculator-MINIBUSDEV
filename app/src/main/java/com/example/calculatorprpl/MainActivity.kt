@@ -15,63 +15,63 @@ class MainActivity : AppCompatActivity() {
 
         btnTambah.setOnClickListener {
             if (txtNumber1.text.toString().isEmpty() || txtNumber2.text.toString().isEmpty()) {
-                txtNumber1.setError("Semua input harus diisi!")
+                txtNumber1.setError("All inputs must be filled!")
             } else {
                 val a = txtNumber1.text.toString().toDouble()
                 val b = txtNumber2.text.toString().toDouble()
-                val c = this.tambah(a, b)
+                val c = this.addition(a, b)
                 txtHasil.setText(c.toString())
             }
         }
 
         btnKurangi.setOnClickListener {
             if (txtNumber1.text.toString().isEmpty() || txtNumber2.text.toString().isEmpty()) {
-                txtNumber1.setError("Semua input harus diisi!")
+                txtNumber1.setError("All inputs must be filled!!")
             } else {
                 val a = txtNumber1.text.toString().toDouble()
                 val b = txtNumber2.text.toString().toDouble()
-                val c = this.kurang(a, b)
+                val c = this.substraction(a, b)
                 txtHasil.setText(c.toString())
             }
         }
 
         btnBagi.setOnClickListener {
             if (txtNumber1.text.toString().isEmpty() || txtNumber2.text.toString().isEmpty()) {
-                txtNumber1.setError("Semua input harus diisi!")
+                txtNumber1.setError("All inputs must be filled!")
             } else {
                 val a = txtNumber1.text.toString().toDouble()
                 val b = txtNumber2.text.toString().toDouble()
-                val c = this.bagi(a, b)
+                val c = this.divided(a, b)
                 txtHasil.setText(c.toString())
             }
         }
 
         btnKali.setOnClickListener {
             if (txtNumber1.text.toString().isEmpty() || txtNumber2.text.toString().isEmpty()) {
-                txtNumber1.setError("Semua input harus diisi!")
+                txtNumber1.setError("All inputs must be filled!")
             } else {
                 val a = txtNumber1.text.toString().toDouble()
                 val b = txtNumber2.text.toString().toDouble()
-                val c = this.kali(a, b)
+                val c = this.multiple(a, b)
                 txtHasil.setText(c.toString())
             }
         }
 
     }
 
-    fun kurang(a: Double, b: Double): Double {
+    fun substraction(a: Double, b: Double): Double {
         return a - b
     }
 
-    fun tambah(a: Double, b: Double): Double {
+    fun addition(a: Double, b: Double): Double {
         return a + b
     }
 
-    fun kali(a: Double, b: Double): Double {
+    fun multiple(a: Double, b: Double): Double {
         return a * b
     }
 
-    fun bagi(a: Double, b: Double): Double {
+    fun divided(a: Double, b: Double): Double {
         return a / b
     }
 }
