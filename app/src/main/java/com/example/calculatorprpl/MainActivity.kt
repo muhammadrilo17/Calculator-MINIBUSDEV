@@ -2,9 +2,8 @@ package com.example.seven7.kotlincalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import com.example.calculatorprpl.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -13,14 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val txtNumber1 = findViewById<EditText>(R.id.txtNumber1)
-        val txtNumber2 = findViewById<EditText>(R.id.txtNumber2)
-        val txtHasil = findViewById<EditText>(R.id.txtHasil)
-
-        val btnTambah = findViewById<Button>(R.id.btnTambah)
-        val btnKurangi = findViewById<Button>(R.id.btnKurangi)
-        val btnBagi = findViewById<Button>(R.id.btnBagi)
-        val btnKali = findViewById<Button>(R.id.btnKali)
 
         btnTambah.setOnClickListener {
             if (txtNumber1.text.toString().isEmpty() || txtNumber2.text.toString().isEmpty()) {
